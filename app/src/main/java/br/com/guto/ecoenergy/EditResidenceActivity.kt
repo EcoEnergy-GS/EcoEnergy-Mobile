@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.util.Log
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -22,6 +23,11 @@ class EditResidenceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_register_residence)
+
+        val backArrow = findViewById<ImageView>(R.id.backArrow)
+        backArrow.setOnClickListener {
+            finish()
+        }
 
         val headerText = findViewById<TextView>(R.id.headerText)
         headerText.text = "Atualizar residência"
